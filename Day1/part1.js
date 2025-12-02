@@ -22,7 +22,7 @@ function rotate(val) {
 
 inputs.forEach(input => {
     const direction = input.split('')[0] === 'L' ? -1 : 1;
-    const movement = parseInt(input.split('').splice(1,input.length).join(''), 10);
+    const movement = parseInt(input.split('').splice(1, input.length).join(''), 10);
     dialPosition += (movement * direction);
     dialPosition = rotate(dialPosition);
     if (!dialPosition) {
@@ -31,4 +31,3 @@ inputs.forEach(input => {
 });
 
 console.log(password);
-

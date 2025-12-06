@@ -1,5 +1,5 @@
 import fs from 'fs';
-const data = fs.readFileSync('./puzinput.txt', 'utf-8');
+const data = fs.readFileSync('./input.txt', 'utf-8');
 
 const inputs = data.toString().split(',');
 
@@ -7,7 +7,7 @@ let invalidNumbers = [];
 
 function checkInvalid(val) {
     const valStr = val.toString();
-    if (valStr.substr(0, valStr.length / 2) === valStr.substr(valStr.length / 2, valStr.length)) {
+    if (valStr.substr(0, valStr.length / 2) === valStr.substring(valStr.length / 2, valStr.length)) {
         invalidNumbers.push(parseInt(valStr, 10));
     }
 }

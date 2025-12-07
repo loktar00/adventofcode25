@@ -42,10 +42,3 @@ for (let y = 0; y <= grid.length - 1; y++) {
 
 console.log(outputGrid.flat().filter(el => el === 'X').length)
 outputGrid.forEach(el => console.log(el.join('')));
-
-
-// 1452 too low
-// 1454 === wrong
-// 1461 === wrong
-// 1464
-// 2972 too high

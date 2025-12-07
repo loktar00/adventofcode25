@@ -44,7 +44,7 @@ while (hasXs) {
     }
 
     const totalXs = outputGrid.flat().filter(el => el === 'X').length;
-    console.log(totalXs)
+
     if (totalXs) {
         count += totalXs;
         grid = outputGrid.map(row => row.map(col => {

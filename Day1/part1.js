@@ -1,6 +1,5 @@
 import fs from 'fs';
 
-
 const data = fs.readFileSync('./input.txt', 'utf-8');
 
 const inputs = data.toString().split('\r\n');

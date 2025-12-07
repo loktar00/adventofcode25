@@ -20,6 +20,28 @@ while (hasXs) {
     for (let y = 0; y <= grid.length - 1; y++) {
         for (let x = 0; x < grid[y].length; x++) {
             if (grid[y][x] === '@') {
+                /*
+                    Not the most optimized way to do this, but the gist is we have a sliding rectangle for example
+
+                    .@.@.@
+                    .@.@.@
+                    .@.@.@
+
+                    On the first @ encountered we will see (removed commas for brevity)
+                    [   ]
+                    [. .]
+                    [.@.]
+
+                    Top row is empty because it's -0, middle row filters the element we're checking
+                    bottom row is the full 3.
+
+                    we then combine all 3 rows into a flattened array and count the number of @ symbols.
+
+                    ... I did this really explicitely just to get the correct answer but this could definitely be golfed down
+                */
+
+
+
                 let topRow = grid[Math.max(y - 1, 0)].slice(Math.max(x - 1, 0), Math.min(x + 2, grid[y].length));
                 if ( y === 0 ) {
                     topRow = [];
